@@ -1,7 +1,8 @@
 atelier
 =======
 
-**Refer to www.artpartner.com**
+## Refer To
+### www.artpartner.com
 
-**Platform**
-Wordpress 
+## Platform
+### Wordpress
