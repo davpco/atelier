@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="lib/simplyscroll/css/jquery.simplyscroll.css" />
+
+
+    <link href="assets/styles/custom.css" rel="stylesheet">
+
+    <link href="lib/animatecss/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav nav-center">
+              <li class="active"><a href="#">ABOUT</a></li>
+              <li><a href="#about">CLIENTS</a></li>
+              <li><a href="#contact">SERVICES</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li class="active"><a href="#">NEWS</a></li>
+              <li><a href="#about">CONTACT</a></li>
+              <li>
+              	<a href="#about">
+	              	<i class="fa fa-instagram"></i>
+              	</a>
+              </li>
+              <li>
+              	<a href="#about">
+	              	<i class="fa fa-facebook"></i>
+              	</a>
+              </li>
+              <li>
+              	<a href="#about">
+	              	<i class="fa fa-twitter"></i>
+              	</a>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+	<div id="loading-icon">
+	    <div class="center">
+	    	<i class="fa fa-spinner pulse animated infinite"></i><br>
+	        <span>Loading</span>
+	    </div>
+	</div>
+    <div id="app" class="container">
+    	<div class="main-app">
+    		<div class="col-3">
+				<ul class="slideshow-vertical">
+				</ul>
+    		</div>
+    		<div class="col-3">
+    			<ul class="slideshow-vertical">
+    			</ul>
+    		</div>
+    		<div class="col-3 hidden-table hidden-phone">
+    			<ul class="slideshow-vertical"></ul>
+    		</div>
+    		<div class="col-3 hidden-phone hidden-phone">
+    			<ul class="slideshow-vertical"></ul>
+    		</div>
+    	</div>
+    </div> <!-- /container -->
+
+    <!-- item template -->
+    <script id="item-image-template" type="text/x-handlebars-template">
+		<li>
+			<a href="{{url}}">
+				<div class="slide">
+					<img src="{{imageUrl}}">
+					<div class="information">
+						<div class="info-contents">
+							<p class="by">By: {{by}}</p>
+							<h2>{{title}}</h2>
+							<p>{{description}}<br></p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
+	</script>
+
+    <script id="item-video-template" type="text/x-handlebars-template">
+		<li>
+			<a href="{{url}}"
+			   data-thumbnail="{{videoThumbnail}}">
+				<div class="slide video-slide"
+					 data-thumbnail="{{videoThumbnail}}"
+					 data-videopreview="{{videoPreview}}">
+			   		<video class="vid" autoplay="" width="100%" heigh="auto" loop="">
+			   			<source src="{{videoSource}}" type="video/mp4">
+			   		</video>
+					<div class="information">
+						<div class="info-contents">
+							<p class="by">By: {{by}}</p>
+							<h2>{{title}}</h2>
+							<p>{{description}}<br></p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
+	</script>
+	<!-- end item template -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="lib/simplyscroll/js/jquery.simplyscroll.js"></script>
+	<script src="lib/handlebars/handlebars-v2.0.0.js"></script>
+	<script src="script/appConfig.js"></script>
+    <script src="script/app.js"></script>
+
+
+
+  </body>
+</html>
