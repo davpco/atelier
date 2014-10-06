@@ -49,6 +49,10 @@
         App.initScrollAction();
         App.playVideo();
       });
+
+      $(window).on("resize", function() {
+        $( ".vert" ).height($(window).height() - 80);
+      });
     };
 
     App.playVideo = function(){
