@@ -143,6 +143,14 @@ border-color: none;
   color: #666;
 }
 
+.navbar-atelier .social-icons a{
+  display: inline-block;
+}
+
+.navbar-atelier .border-right{
+  border-right:1px solid gray;
+}
+
 @media (max-width: 767px) {
   .navbar .nav-center{
     margin: inherit;
@@ -151,5 +159,11 @@ border-color: none;
   }
   .nav-collapse {
     text-align: center;
+  }
+  .navbar-atelier .border-right{
+    border-right:none;
+  }
+  .navbar-atelier .brand:hover, .navbar-atelier .nav > li > a:hover, .navbar-atelier .brand:focus, .navbar-atelier .nav > li > a:focus {
+    color: white;
   }
 }
