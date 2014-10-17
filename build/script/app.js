@@ -29,7 +29,7 @@
           $verticalSlider,
           $actualColumn,
           actualColumnIndex = 0,
-          actualColumnItemIndex = 0,
+          actualColumnItemIndex = -1,
           templateSource;
 
       // we divide by the number of columns the number of items

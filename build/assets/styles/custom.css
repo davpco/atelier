@@ -70,6 +70,10 @@ body{
   height: auto;
 }
 
+.slideshow-vertical .slide{
+/*  min-height: 250px;*/
+}
+
 ul.slideshow-vertical{
   margin: 0 0 0px 0px;
 }
