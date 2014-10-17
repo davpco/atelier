@@ -24,87 +24,80 @@ module.exports = function(grunt) {
 						drop_console: true
 					}      				
     			},
-				files: {
-				}
+				files: [
+					{
+						expand: true,
+						cwd: 'build/script',
+						src: '**/*.js',
+						dest: 'deploy/script'
+					},
+					{
+						expand: true,
+						cwd: 'build/lib',
+						src: '**/*.js',
+						dest: 'deploy/lib'
+					}
+				]
+			}
+		},
+		cssmin: {
+			minify: {
+				expand: true,
+				cwd: 'build/assets/styles',
+				src: ['*.css'],
+				dest: 'deploy/assets/styles',
+				ext: '.css'
+			},
+			minify2: {
+				expand: true,
+				cwd: 'build/lib',
+				src: ['**/*.css'],
+				dest: 'deploy/lib',
+				ext: '.css'
 			}
 		},
 		copy: {
-			// remoteProduction: {
-			// 	src: [
-			// 			'assets/**/*',
-			// 			'bower_components/**/*',
-			// 			'config/**/*',
-			// 			'lib/**/*',
-			// 			'!lib/font-awesome',
-			// 			'script/**/*',
-			// 			'lib/anijs/**/*'
-			// 		],
-			// 	dest: '../anijs.github.io/',
-			// 	options: {
-			// 	}
-			// },
+			remoteProduction: {
+			    files: [
+			      // includes files within path
+			      {
+			      	expand: true,
+			      	cwd: 'build/',
+			      	src: [
+						'**/*',
+						'**/*.css',
+						'**/*.js',
+			      	],
+			      	dest: 'deploy/',
+			      },
 
-			// hmlOverwriteLocalDependencyLoad: {
-			// 	src: ['index.html'],
-			// 	dest: '../anijs.github.io/',
-			// 	options: {
-			// 		process: function (content, srcpath) {
+			      // includes files within path and its sub-directories
+			      {expand: true, src: ['path/**'], dest: 'dest/'},
 
-			// 			var YUI3 = {
-			// 				local: /<script src="..\/framework\/yui3\/3.11.0\/build\/yui\/yui-min.js"><\/script>/g,
-			// 				prod: '<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>'
-			// 			};
+			      // makes all src relative to cwd
+			      {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
 
-			// 			var AniJS = {
-			// 				local: /<script src="..\/..\/anijs\/src\/anijs.js"><\/script>/g,
-			// 				prod: '<script src="lib/anijs/anijs.js"></script>'
-			// 			};
-
-			// 			var AniJSDomHelper = {
-			// 				local: /<script src="..\/..\/anijs\/src\/helpers\/dom\/anijs-helper-dom.js"><\/script>/g,
-			// 				prod: '<script src="lib/anijs/helpers/dom/anijs-helper-dom.js"></script>'
-			// 			};
-			// 			var PureCSS = {
-			// 				local: /<link rel="stylesheet" href="bower_components\/pure\/pure.css">/g,
-			// 				prod: '<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">'
-			// 			};
-
-			// 			var FontAwesome = {
-			// 				local: /<link rel="stylesheet" href="lib\/font-awesome\/css\/font-awesome.min.css">/g,
-			// 				prod: '<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">'
-
-			// 			};
-
-			// 			var AnimateCSS = {
-			// 				local: /<link rel="stylesheet" href="lib\/animationcss\/animate.css">/g,
-			// 				prod: '<link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css">'
-			// 			};
-
-			// 			//YUI3 local
-			// 			content = content.replace(YUI3.local, YUI3.prod);
-
-			// 			//AniJS
-			// 			//TODO: When put it in CDN replace this code
-			// 			content = content.replace(AniJS.local, AniJS.prod);
-			// 			content = content.replace(AniJSDomHelper.local, AniJSDomHelper.prod);
-			// 			//PureCSS
-			// 			content = content.replace(PureCSS.local, PureCSS.prod);
-
-			// 			//FontAwesome
-			// 			content = content.replace(FontAwesome.local, FontAwesome.prod);
-			// 			return content;
-			// 		}
-			// 	}
-			// }
+			      // flattens results to a single level
+			      {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
+			    ]
+			}
 		}
 	});
 
   	// Load task-providing plugins.
   	grunt.loadNpmTasks('grunt-contrib-jade');
+  	grunt.loadNpmTasks('grunt-contrib-copy');
+  	grunt.loadNpmTasks('grunt-contrib-uglify');
+  	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	grunt.registerTask(
 		'prod',
-		'Compiles all of the assets and copies the files to the build directory.',
-		[ 'jade']
+		'Compiles all of the assets and copies the files to the build directory.', 
+		[ 'copy','uglify', 'cssmin']
 	);
+	// grunt.registerTask(
+	// 	'prod',
+	// 	'Compiles all of the assets and copies the files to the build directory.',
+	// 	[ 'jade']
+	// );
 };
