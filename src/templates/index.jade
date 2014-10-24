@@ -2,6 +2,13 @@ extends layout
 
 block head  
     title Atelier
+    block customStyles
+        // SimplyScroll plugin
+        link(rel="stylesheet", href="lib/simplyscroll/css/jquery.simplyscroll.css")
+        // custom styles
+        link(href="assets/styles/index.css", rel="stylesheet")
+        // animated css library
+        link(rel="stylesheet", href="lib/animatecss/animate.css")
 
 block content  
     |<!-- loading layer -->
