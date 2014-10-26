@@ -64,3 +64,10 @@ ul.slideshow-vertical{
 .fancybox-title{
   font-weight: bold;
 }
+
+@media (max-width: 980px) {
+  #app .col-3 {
+      width: 46.80%;
+      padding: 1.60%;
+  }
+}

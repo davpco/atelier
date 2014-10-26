@@ -105,10 +105,6 @@ border-color: none;
   body{
     padding-top: 0px;
   }
-  #app .col-3 {
-      width: 46.80%;
-      padding: 1.60%;
-  }
 
   .navbar-fixed-top {
     margin-bottom: 5px;
