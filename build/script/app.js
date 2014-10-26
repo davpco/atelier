@@ -47,6 +47,26 @@
         actualColumnItemIndex++;
         $($actualColumn).append(App.renderItem(data[i]));
       }
+
+      $(".fancybox").fancybox({
+          helpers : {
+              title: {
+                  type: 'inside',
+                  position: 'bottom'
+              }
+          }
+      });
+
+      $(".fancybox-video").fancybox({
+        'autoScale' : true,
+        helpers : {
+            media : {},
+            title: {
+                type: 'inside',
+                position: 'bottom'
+            }
+        }
+      });
     };
 
     /**

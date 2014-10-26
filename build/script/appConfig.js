@@ -6,7 +6,7 @@ APP_CONFIG = {
     items: [
       {
         type:'image',
-        url: '#',
+        url: 'assets/images/india/India_Hicks_Logo_BLK.png',
         imageUrl:'assets/images/india/India_Hicks_Logo_BLK.png',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -14,7 +14,7 @@ APP_CONFIG = {
       },
       {
         type:'video',
-        url: 'http://www.artpartner.com/artists/film/mert-alas-marcus-piggott/videos/stella-mccartney-fw-2014/',
+        url: 'https://www.youtube.com/watch?v=4WWa2qcfCEk',
         videoThumbnail:'http://i.vimeocdn.com/video/483363115_640.jpg',
         videoPreview:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
         videoSource:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
@@ -24,7 +24,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: 'http://www.artpartner.com/artists/image/cedric-buchet/-style-magazine-super-savy/',
+        url: 'assets/images/TEMPLE-ST-CLAIR/Frog-Prince.jpg',
         imageUrl:'assets/images/TEMPLE-ST-CLAIR/Frog-Prince.jpg',
         by: 'Cedric Buchet',
         title: 'Style Magazine',
@@ -32,7 +32,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'assets/images/Thale-Blanc/170470870.jpg',
         imageUrl:'assets/images/Thale-Blanc/170470870.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -40,7 +40,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -49,7 +49,7 @@ APP_CONFIG = {
       //Second column
       {
         type:'image',
-        url: 'http://www.artpartner.com/artists/image/cedric-buchet/-style-magazine-super-savy/',
+        url: 'assets/images/BRUCE-WEBER/2f741f9795aaae0903a5d8bf_600x800.jpg',
         imageUrl:'assets/images/BRUCE-WEBER/2f741f9795aaae0903a5d8bf_600x800.jpg',
         by: 'Cedric Buchet',
         title: 'Style Magazine',
@@ -57,7 +57,7 @@ APP_CONFIG = {
       },
       {
         type:'video',
-        url: 'http://www.artpartner.com/artists/film/mert-alas-marcus-piggott/videos/stella-mccartney-fw-2014/',
+        url: 'https://www.youtube.com/watch?v=4WWa2qcfCEk',
         videoThumbnail:'http://i.vimeocdn.com/video/483363115_640.jpg',
         videoPreview:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
         videoSource:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
@@ -67,7 +67,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: 'http://www.artpartner.com/artists/image/cedric-buchet/-style-magazine-super-savy/',
+        url: 'assets/images/LEGGIADRO/Leggiadro-2014-TandC-September.jpg',
         imageUrl:'assets/images/LEGGIADRO/Leggiadro-2014-TandC-September.jpg',
         by: 'Cedric Buchet',
         title: 'Style Magazine',
@@ -75,7 +75,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'assets/images/EFVA-ATTLING/image.jpeg',
         imageUrl:'assets/images/EFVA-ATTLING/image.jpeg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -84,7 +84,7 @@ APP_CONFIG = {
       //Third column
       {
         type:'video',
-        url: 'http://www.artpartner.com/artists/film/mert-alas-marcus-piggott/videos/stella-mccartney-fw-2014/',
+        url: 'https://www.youtube.com/watch?v=4WWa2qcfCEk',
         videoThumbnail:'http://i.vimeocdn.com/video/483363115_640.jpg',
         videoPreview:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
         videoSource:'http://www.artpartner.com/files/media//video_preview_file_1406150627_MM_stella.mp4',
@@ -94,7 +94,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'assets/images/JORGE-ADELER/ADELER1.jpg',
         imageUrl:'assets/images/JORGE-ADELER/ADELER1.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -102,7 +102,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -110,7 +110,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'assets/images/INTELLIGENT-NUTRIENTS/12-0626-PURELUXE-RENDERING.jpg',
         imageUrl:'assets/images/INTELLIGENT-NUTRIENTS/12-0626-PURELUXE-RENDERING.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -119,7 +119,7 @@ APP_CONFIG = {
       //Four column
       {
         type:'image',
-        url: '#',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -127,7 +127,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -135,7 +135,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: '#',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/f/4/0/1/AP087757.jpg',
         by: 'Glen Luchford',
         title: 'Gap',
@@ -143,7 +143,7 @@ APP_CONFIG = {
       },
       {
         type:'image',
-        url: 'http://www.artpartner.com/artists/image/cedric-buchet/-style-magazine-super-savy/',
+        url: 'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/4/a/f/b/AP088492.jpg',
         imageUrl:'http://syndication.artpartner.com/CorexDoc/AP0/Media/TR13/4/a/f/b/AP088492.jpg',
         by: 'Cedric Buchet',
         title: 'Style Magazine',

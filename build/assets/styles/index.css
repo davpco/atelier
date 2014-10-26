@@ -60,3 +60,7 @@ ul.slideshow-vertical{
   display: block;
   padding: 0px;
 }
+
+.fancybox-title{
+  font-weight: bold;
+}

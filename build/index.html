@@ -5,6 +5,8 @@
     <title>Atelier</title>
     <!-- SimplyScroll plugin-->
     <link rel="stylesheet" href="lib/simplyscroll/css/jquery.simplyscroll.css"/>
+    <!--Add fancyBox-->
+    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css"/>
     <!-- custom styles-->
     <link href="assets/styles/index.css" rel="stylesheet"/>
     <!-- animated css library-->
@@ -21,6 +23,8 @@
     <link href="assets/styles/layout.css" rel="stylesheet"/>
     <!-- SimplyScroll plugin-->
     <link rel="stylesheet" href="lib/simplyscroll/css/jquery.simplyscroll.css"/>
+    <!--Add fancyBox-->
+    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css"/>
     <!-- custom styles-->
     <link href="assets/styles/index.css" rel="stylesheet"/>
     <!-- animated css library-->
@@ -107,7 +111,7 @@
 <!-- item image template -->
 <script id="item-image-template" type="text/x-handlebars-template">
 	<li>
-		<a href="{{url}}">
+		<a class="fancybox" href="{{url}}" title="{{description}}">
 			<div class="slide">
 				<img src="{{imageUrl}}">
 				<div class="information">
@@ -125,8 +129,10 @@
 <!-- item video template -->
 <script id="item-video-template" type="text/x-handlebars-template">
 	<li>
-		<a href="{{url}}"
-		   data-thumbnail="{{videoThumbnail}}">
+		<a class="fancybox-video" href="{{url}}"
+         title="{{description}}"
+		   data-thumbnail="{{videoThumbnail}}"
+         data-fancybox-type="iframe">
 			<div class="slide video-slide"
 				 data-thumbnail="{{videoThumbnail}}"
 				 data-videopreview="{{videoPreview}}">
@@ -155,6 +161,9 @@
 <script src="lib/simplyscroll/js/jquery.simplyscroll.js"></script>
 <!-- render template engine -->
 <script src="lib/handlebars/handlebars-v2.0.0.js"></script>
+<!-- Add fancyBox -->
+<script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-media.js"></script>
 <!-- app configuration -->
 <script src="script/appConfig.js"></script>
 <!-- app entry point -->
