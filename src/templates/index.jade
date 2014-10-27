@@ -1,0 +1,99 @@
+extends layout
+
+block head  
+    title Atelier
+    block customStyles
+        // SimplyScroll plugin
+        link(rel="stylesheet", href="lib/simplyscroll/css/jquery.simplyscroll.css")
+
+        //Add fancyBox
+        link(rel="stylesheet", href="lib/fancybox/source/jquery.fancybox.css")
+        // custom styles
+        link(href="assets/styles/index.css", rel="stylesheet")
+        // animated css library
+        link(rel="stylesheet", href="lib/animatecss/animate.css")
+
+block content  
+    |<!-- loading layer -->
+    |<div id="loading-icon">
+    |    <div class="center">
+    |    	<i class="fa fa-spinner pulse animated infinite"></i><br>
+    |        <span>Loading</span>
+    |    </div>
+    |</div>
+    |<!-- end loading layer -->
+    |<!-- app -->
+    |		<div class="col-3">
+    |			<ul class="slideshow-vertical">
+    |			</ul>
+    |		</div>
+    |		<div class="col-3">
+    |			<ul class="slideshow-vertical">
+    |			</ul>
+    |		</div>
+    |		<div class="col-3 hidden-table hidden-phone">
+    |			<ul class="slideshow-vertical"></ul>
+    |		</div>
+    |		<div class="col-3 hidden-phone hidden-phone">
+    |			<ul class="slideshow-vertical"></ul>
+    |		</div>
+    |<!-- end app -->
+    |<!-- item image template -->
+    |<script id="item-image-template" type="text/x-handlebars-template">
+    |	<li>
+    |		<a class="fancybox" href="{{url}}" title="{{description}}">
+    |			<div class="slide">
+    |				<img src="{{imageUrl}}">
+    |				<div class="information">
+    |					<div class="info-contents">
+    |						<p class="by">By: {{by}}</p>
+    |						<h2>{{title}}</h2>
+    |						<p>{{description}}<br></p>
+    |					</div>
+    |				</div>
+    |			</div>
+    |		</a>
+    |	</li>
+    |  </script>
+    |<!-- end item image template -->
+    |<!-- item video template -->
+    |<script id="item-video-template" type="text/x-handlebars-template">
+    |	<li>
+    |		<a class="fancybox-video" href="{{url}}"
+    |          title="{{description}}"
+    |		   data-thumbnail="{{videoThumbnail}}"
+    |          data-fancybox-type="iframe">
+    |			<div class="slide video-slide"
+    |				 data-thumbnail="{{videoThumbnail}}"
+    |				 data-videopreview="{{videoPreview}}">
+    |		   		<video class="vid" autoplay="" width="100%" heigh="auto" loop="">
+    |		   			<source src="{{videoSource}}" type="video/mp4">
+    |		   		</video>
+    |				<div class="information">
+    |					<div class="info-contents">
+    |						<p class="by">By: {{by}}</p>
+    |						<h2>{{title}}</h2>
+    |						<p>{{description}}<br></p>
+    |					</div>
+    |				</div>
+    |			</div>
+    |		</a>
+    |	</li>
+    |</script>
+    |<!-- end item video template -->
+block append scripts
+    |<!-- onload image feature -->
+    |<script src="lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    |<!-- infinite scroll -->
+    |<script src="lib/simplyscroll/js/jquery.simplyscroll.js"></script>
+    |<!-- render template engine -->
+    |<script src="lib/handlebars/handlebars-v2.0.0.js"></script>
+    |<!-- Add fancyBox -->
+    |<script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js"></script>
+    |<script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    |<!-- app configuration -->
+    |<script src="script/appConfig.js"></script>
+    |<!-- app entry point -->
+    |<script src="script/app.js"></script>
+    |<!-- declarative animations library -->
+    |<script src="http://anijs.github.io/lib/anijs/anijs-min.js"></script>
